@@ -1,0 +1,21 @@
+body {
+  background: #70b470;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.content-container img {
+  width: 30%;
+  height: auto;
+}
+
+
+/* Randomise the look and feel of the website by using DOM manipulation 
+This could be changing font family, font colour, background colour, etc
+Profile picture use http://avatars.adorable.io/#demo (Links to an external site.) 
+and base it off the name // */
