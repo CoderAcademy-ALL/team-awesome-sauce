@@ -1,18 +1,23 @@
 const express = require('express');
 const casual = require('casual');
 const app = express();
-const router = express.Router();
+
+const profileRouter = express.Router();
 
 let profile;
 
-router.get('/',function(req,res){
-    res.send("Hello")
-});
+profileRouter.get('/',function(req,res){
+    res.send({
+        name: casual.name,
+        address: casual.address,
+        colour: casual.rgb_hex,
+        cardType: casual.card_type,
+        cardNumber: casual.card_number,
+        cardExpiry: casual.card_exp,
+    })
+}); 
+
+// wilson buy me a beer
 
 
-
-//add the router
-app.use('/', router);
-app.listen(process.env.port || 3000);
-
-console.log('Running at Port 3000');
+module.exports = {profileRouter}
